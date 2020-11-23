@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <LinearLayout
+        android:id="@+id/mylinear"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="kr.co.company.myapplication.MainActivity">
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:columnCount="3"
+            android:orientation="horizontal"
+            android:rowCount="1">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo100"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="추천 채널 : "
+                android:textColor="@android:color/holo_orange_light"></TextView>
+
+            <TextView
+                android:id="@+id/channel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="채널추천"
+                android:textColor="@android:color/holo_orange_light"></TextView>
+        </GridLayout>
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:columnCount="3"
+            android:orientation="horizontal"
+            android:rowCount="1">
+            <Spinner
+                android:layout_column="0"
+                android:id="@+id/server"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/server" />
+
+            <EditText
+                android:id="@+id/myedit"
+                android:layout_width="126dp"
+                android:layout_height="wrap_content"
+                android:hint="캐릭터명" />
+
+            <Button
+                android:id="@+id/mybutton"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:text="검색" />
+        </GridLayout>
+<TextView
+    android:layout_marginStart="5dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="최근 캐릭터 목록"></TextView>
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"></ListView>
+
+        <ImageView
+            android:id="@+id/neople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/neople_logo"></ImageView>
+    </LinearLayout>
+
+</LinearLayout>
